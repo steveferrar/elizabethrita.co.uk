@@ -1,0 +1,19 @@
+/*
+Theme Name: Elizabeth Rita [1.0]
+Theme URI: http://www.elizabethrita.co.uk
+Author: Steve Ferrar
+Author URI: http://www.steveferrar.com
+Description: Theme for Elizabeth Rita (January 2016)
+Version: 1.0
+Tags: Custom Theme, Bootstrap, Boilerplate, Elizabeth Rita, Steve Ferrar
+*/
+
+
+/* = Get Stylesheets
+-----------------------------------------------*/
+
+/* Bootstrap */
+@import url("css/bootstrap.min.css");
+
+/* Custom */
+@import url("css/main.css");
