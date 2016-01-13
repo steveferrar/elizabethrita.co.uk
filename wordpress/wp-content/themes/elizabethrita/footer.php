@@ -63,7 +63,11 @@
 	<script src="<?php bloginfo('template_url'); ?>/js/vendor/jquery-1.11.3.min.js"></script>
 	<script src="<?php bloginfo('template_url'); ?>/js/plugins.js"></script>
 	<script src="<?php bloginfo('template_url'); ?>/js/main.js"></script>
-
+	<?php if (is_page(20)): ?>
+		<script src="<?php bloginfo('template_url'); ?>/js/flexslider-video-plugins.js"></script>
+		<script src="<?php bloginfo('template_url'); ?>/js/flexslider-video-main.js"></script>
+	<?php endif; ?>
+	
 	<?php wp_footer(); ?>
 
 	<!-- Google Analytics
