@@ -19,6 +19,12 @@ get_header(); ?>
 			elseif(is_page(20)): 
 				get_template_part('part', 'showreel');
 			?>
+		
+			<?php 
+			// Showreel Page
+			elseif(is_page(20)): 
+				get_template_part('part', 'showreel');
+			?>
 			
 			<?php 
 			// All Other Pages
@@ -31,9 +37,25 @@ get_header(); ?>
 					
 						<div class="row">
 						
-							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-								<h1><?php the_title(); ?></h1>
-								<?php the_content(); ?>
+							<div class="page-text-wrapper">
+								<?php 
+								if(get_field('content_image')):
+								$image = wp_get_attachment_image_src( get_field('content_image') , '' );
+								?>
+									<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 page-text">
+										<?php the_content(); ?>
+									</div>
+									<div class="hidden-xs col-sm-4 col-md-4 col-lg-4 page-image">
+										<img src="<?php echo $image[0]; ?>" alt="<?php echo get_field('page_title'); ?>" />
+									</div>
+								<?php else: ?>
+									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 page-text">
+										<?php the_content(); ?>
+									</div>
+								<?php endif; ?>
+								
+								<div class="clearfix"></div>
+								
 							</div>
 							
 						</div>

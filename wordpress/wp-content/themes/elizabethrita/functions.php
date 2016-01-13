@@ -48,6 +48,7 @@
 // First toolbar line
 	function extended_editor_mce_buttons($buttons) {
 		return array(
+			"formatselect", 
 			"bold", 
 			"italic", 
 			"underline", 
@@ -55,13 +56,13 @@
 			"separator",
 			"bullist", 
 			"numlist", 
-			// "blockquote", 
+			"blockquote", 
 			"hr", 
 			// "removeformat", 
 			"separator",
-			"justifyleft", 
-			"justifycenter", 
-			"justifyright", 
+			"alignleft", 
+			"aligncenter", 
+			"alignright", 
 			"seperator",
 			"undo", 
 			"redo", 
