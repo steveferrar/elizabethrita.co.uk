@@ -63,11 +63,75 @@
 
 	<!--[if lt IE 7]><p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p><![endif]--> 
 
-	<header id="header" class="">
-		
-		<nav id="navigation">
-		</nav>
-	
-	</header>
-	
+	<nav id="mobile-navigation">
+		<ul>
+			<li><a href="<?php echo get_home_url(); ?>" title="Home">Home</a></li>
+			<li><a href="<?php echo get_permalink(6); ?>" title="Beauty">Beauty</a></li>
+			<li><a href="<?php echo get_permalink(8); ?>" title="Fashion">Fashion</a></li>
+			<li><a href="<?php echo get_permalink(10); ?>" title="Male Grooming">Male Grooming</a></li>
+			<li><a href="<?php echo get_permalink(12); ?>" title="Children">Children</a></li>
+			<li><a href="<?php echo get_permalink(14); ?>" title="Nails">Nails</a></li>
+			<li><a href="<?php echo get_permalink(16); ?>" title="Celebrities">Celebrities</a></li>
+			<li><a href="<?php echo get_permalink(25); ?>" title="Weddings">Weddings</a></li>
+		</ul>
+	</nav>
+					
 	<div id="page-wrapper"><?php // footer.php: </div> ?>
+	
+		<header id="header" class="">
+			
+			<div class="container">
+			
+				<div class="row">
+					
+					<div class="col-xs-9 col-sm-9 hidden-md hidden-lg header-logo text-left">
+						<img src="<?php bloginfo('template_url'); ?>/img/elizabeth-rita.png" alt="Elizabeth Rita | Freelance Hair &amp; Make Up Artist" />
+					</div>
+					
+					<div class="col-xs-3 col-sm-3 hidden-md hidden-lg text-right">
+						<a href="#" class="menu-button">
+							<div id="nav-icon">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</a>
+					</div>
+					
+					<div class="hidden-xs hidden-sm col-md-12 col-lg-12">
+						<?php
+						if(!(is_front_page())):
+							if(get_field('page_title')):
+								echo '<h1 class="page-title">&ldquo;' . get_field('page_title') . '&rdquo;</h1>';
+							else:
+								echo '<h1 class="page-title">&ldquo;' . get_the_title() . '&rdquo;</h1>';
+							endif;
+						else:
+							echo '<h1 class="page-title hidden-xs hidden-sm">&nbsp;</h1>';
+						endif;
+						?>
+					</div>
+				
+					<div class="hidden-xs hidden-sm col-md-12 col-lg-12">
+			
+						<nav id="header-navigation">
+							<ul>
+								<li><a href="<?php echo get_home_url(); ?>" title="Home">Home</a></li>
+								<li><a href="<?php echo get_permalink(6); ?>" title="Beauty">Beauty</a></li>
+								<li><a href="<?php echo get_permalink(8); ?>" title="Fashion">Fashion</a></li>
+								<li><a href="<?php echo get_permalink(10); ?>" title="Male Grooming">Male Grooming</a></li>
+								<li><a href="<?php echo get_permalink(12); ?>" title="Children">Children</a></li>
+								<li><a href="<?php echo get_permalink(14); ?>" title="Nails">Nails</a></li>
+								<li><a href="<?php echo get_permalink(16); ?>" title="Celebrities">Celebrities</a></li>
+								<li><a href="<?php echo get_permalink(25); ?>" title="Weddings">Weddings</a></li>
+							</ul>
+						</nav>
+					
+					</div>
+				
+				</div>
+			
+			</div>
+		
+		</header>
+	

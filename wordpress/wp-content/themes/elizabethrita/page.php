@@ -9,15 +9,15 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 			
 			<?php 
-			// Page 1
-			if(is_page(1)):
-				get_template_part('part', 'page'); 
+			// Gallery Pages
+			if(is_page(6) || is_page(8) || is_page(10) || is_page(12) || is_page(14) || is_page(16)):
+				get_template_part('part', 'gallery'); 
 			?>
 		
 			<?php 
-			// Page 2
-			elseif(is_page(2)): 
-				get_template_part('part', 'page');
+			// Showreel Page
+			elseif(is_page(20)): 
+				get_template_part('part', 'showreel');
 			?>
 			
 			<?php 

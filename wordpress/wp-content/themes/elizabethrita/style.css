@@ -15,5 +15,8 @@ Tags: Custom Theme, Bootstrap, Boilerplate, Elizabeth Rita, Steve Ferrar
 /* Bootstrap */
 @import url("css/bootstrap.min.css");
 
+/* Fonts */
+@import url("fonts/trajan-pro/trajan-pro.css");
+
 /* Custom */
 @import url("css/main.css");

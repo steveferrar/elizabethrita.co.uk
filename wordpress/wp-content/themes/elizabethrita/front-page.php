@@ -15,8 +15,35 @@ get_header(); ?>
 					<div class="row">
 					
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-							<h1><?php the_title(); ?></h1>
-							<?php the_content(); ?>
+							
+							<?php
+							if(get_field('images')):
+							?>
+			
+								<div class="flexslider">
+									<ul class="slides">
+									
+										<?php
+										while(has_sub_field('images')):
+										if(get_sub_field('image')):
+										$image = wp_get_attachment_image_src( get_sub_field('image') , '' );
+										if(get_sub_field('name')): $name = get_sub_field('name'); else: $name = 'Elizabeth Rita | Freelance Hair &amp; Make Up Artist'; endif;
+										?>
+										
+											<li><img src="<?php echo $image[0]; ?>" alt="<?php echo $name; ?>" class="flexImages" /></li>
+											
+										<?php
+										endif;
+										endwhile
+										?>
+										
+									</ul>
+								</div>
+							
+							<?php
+							endif;
+							?>
+							
 						</div>
 						
 					</div>
